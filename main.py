@@ -9,8 +9,12 @@ if os.path.isfile(".env"):
 
 from db import engine, Base
 from bookstore.routes.item import item_router, items_router
+from bookstore.routes.user import user_router
+from bookstore.routes.authentication import user_login_router
 
 app = FastAPI()
+app.include_router(user_router)
+app.include_router(user_login_router)
 app.include_router(item_router)
 app.include_router(items_router)
 Base.metadata.create_all(bind=engine)
