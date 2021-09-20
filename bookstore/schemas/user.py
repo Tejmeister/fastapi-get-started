@@ -13,18 +13,17 @@ class UserSchemaCreate(UserSchemaResponse):
 	password: str
 
 
+class UserSchemaFull(UserSchemaResponse):
+	id: int
+
+
 class Token(BaseModel):
     access_token: str
     token_type: str
 
 
 class TokenData(BaseModel):
-    email: Optional[str] = None
-
-
-
-class UserSchemaFull(UserSchemaResponse):
-	id: int
+    username : Optional[str] = None
 
 
 class Login(BaseModel):
