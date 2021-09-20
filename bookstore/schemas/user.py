@@ -29,3 +29,8 @@ class TokenData(BaseModel):
 class Login(BaseModel):
     username: str
     password: str
+
+
+class Settings(BaseModel):
+    authjwt_secret_key:str='ff8ca1c67da40e0719024d68af64fcb61284b41f7dcfed670753077702d9cb86'
+
