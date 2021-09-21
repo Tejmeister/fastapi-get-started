@@ -8,7 +8,6 @@ from bookstore.repository.user import UserRepository
 from bookstore.schemas.user import UserSchemaResponse, Login, Settings
 from db import get_db
 from ..hashing import Hash
-#from ..token import create_access_token, verify_token
 
 user_login_router = APIRouter(tags=['Authenticate'])
 

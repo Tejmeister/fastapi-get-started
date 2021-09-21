@@ -1,5 +1,4 @@
 from fastapi import Depends, HTTPException, status
-#from .token import verify_token
 from fastapi_jwt_auth import AuthJWT
 
 def get_current_user(Authorize: AuthJWT = Depends()):
